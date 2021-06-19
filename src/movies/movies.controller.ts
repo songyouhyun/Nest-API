@@ -5,7 +5,7 @@ export class MoviesController {
     @Get()
     getAll() {
         return 'This will return all movies';
-    }
+    } 
 
     @Get("search")
     search(@Query("year") searchingYear: string){
