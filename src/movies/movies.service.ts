@@ -32,7 +32,8 @@ export class MoviesService {
     }
     
     update(id:number, updateData){
-        // id가 1인 movie를 가져온다 -> 그 movie를 지운다 -> 과거의 데이터에 새로운 데이터를 더해서 새로운 movie를 만든다
+        // 조금 조잡한 update logic
+        // 해당 id의 movie를 가져온다 -> 그 movie를 지운다 -> 과거의 데이터에 새로운 데이터를 더해서 새로운 movie를 만든다
         const movie = this.getOne(id);
         this.deleteOne(id);
         this.movies.push({ ...movie, ...updateData });
